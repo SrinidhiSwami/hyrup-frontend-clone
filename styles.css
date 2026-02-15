@@ -11,6 +11,9 @@
     --scrollbar-track: #0000000d;
     --sec-background:rgba(0, 0, 0, 0.05);
 }
+html{
+    scroll-behavior: smooth;
+}
 *{
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
@@ -22,6 +25,19 @@ body{
     font-family: var(--font-primary);
     -webkit-font-smoothing: antialiased;
 }
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -46,8 +62,6 @@ nav{
 .logo {
   font-weight: 600;
   font-size: 1.8rem;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -70,11 +84,6 @@ nav{
     padding: 0;
     margin: 0;
 }
-#theme{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .orange-btn{
     background-color: var(--sec-color);
     border: none;
@@ -83,10 +92,6 @@ nav{
 .section-1{
     position: relative;
     top: 5.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 11.5rem;
 }
 .container{
@@ -94,10 +99,7 @@ nav{
     font-size: 16px;
     line-height: 1.5;
     color: var(--font-color);
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: var(--font-primary);
 }
 .orange-container{
@@ -134,8 +136,6 @@ nav{
 }
 
 .buttons{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 64px;
@@ -170,7 +170,6 @@ nav{
     border: 1px solid rgba(0, 0, 0, 0.1);
     font-family: var(--font-primary);
     border-radius: 5px;
-    /* height: 29rem; */
 }
 .paragraph{
     font-family: var(--font-system);
@@ -187,18 +186,11 @@ nav{
 .box-text{
     font-size: 3rem;
     font-weight: 600;
-    /* margin: 8px; */
     margin: 0;
 }
 .section-2{
     background-color: var(--sec-background);
     padding: 7.5rem 1rem;
-}
-.section{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 .section-2-top{
     color: rgba(0, 0, 0, 0.4);
@@ -302,9 +294,6 @@ nav{
     width: 1.8rem;
     height: 1.8rem;
     padding: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
@@ -335,8 +324,6 @@ nav{
 }
 
 .sec-4-unit-1{
-    display: flex;
-    align-items: center;
     justify-content: flex-start;
     gap: 15px;
 }
@@ -344,9 +331,6 @@ nav{
 .sec-4-icon-box{
     width: 64px;
     height: 64px;
-     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .sec-4-unit-2{
@@ -366,4 +350,53 @@ nav{
 
 .rupee{
     font-size: 2.8rem;
+}
+
+.sec-5-box-container{
+    gap: 30px;
+}
+
+.sec-5-box{
+    width: 90%;
+    align-items: flex-start;
+}
+
+.unit{
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 25rem;
+    margin: 1rem;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.participation{
+    flex-direction: column;
+}
+.college-name{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--font-color);
+    font-family: var(--font-system);
+}
+
+.numOfStud{
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-family: var(--font-system);
+}
+
+.bar{
+    width: 100%;
+    background-color: var(--sec-background);
+    border-radius: 2px;
+    height: 10px;
+}
+.orange-bar{
+    height: 100%;
+    background-color: var(--sec-color);
+    border-radius: 2px;
 }
