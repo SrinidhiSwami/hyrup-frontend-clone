@@ -2,9 +2,7 @@
     --bg-color:#bcb7ac;
     --font-color:#000;
     --sec-color:#e95d57;
-    /* --spacing:0.25rem; */
     --font-system:"IBM Plex Mono", monospace;
-    /* --font-primary:"Inter", system-ui, sans-serif; */
     --font-primary:"Inter", sans-serif;
     --scrollbar-thumb: #00000040;
     --scrollbar-thumb-hover: #0006;
@@ -39,6 +37,11 @@ body{
     align-items: center;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -64,12 +67,13 @@ nav{
   font-weight: 600;
   font-size: 1.8rem;
   justify-content: space-between;
+  color: var(--font-color);
 }
 
 .btn{
     cursor: pointer;
     text-transform: uppercase;
-    border: 1px solid black;
+    border: 1px solid var(--font-color);
     font-size: 1rem;
     font-weight: 500;
     transition: all .2s;
@@ -80,6 +84,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--font-color);
 }
 .moon{
     padding: 0;
@@ -88,6 +93,7 @@ nav{
 .orange-btn{
     background-color: var(--sec-color);
     border: none;
+    color: var(--font-color);
 }
 
 .section-1{
@@ -96,7 +102,7 @@ nav{
     margin-bottom: 11.5rem;
 }
 .container{
-    width: 56rem;
+    width: 80%;
     font-size: 16px;
     line-height: 1.5;
     color: var(--font-color);
@@ -123,10 +129,14 @@ nav{
     text-align: center;
     font-family: "Inter", sans-serif;
     margin-bottom: 1.7rem;
+    color: var(--font-color);
+    display: inline-block;
+    width: 90%;
 }
 
 .text-box{
-    color: rgba(0,0,0,0.7);
+    color: var(--font-color);
+    font-weight: 300;
     text-align: center;
     display: inline-block;
     font-size: 1.6rem;
@@ -168,7 +178,7 @@ nav{
     background-color: var(--sec-background);
     width: 10rem;
     padding: 1.2rem 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--bg-color);
     font-family: var(--font-primary);
     border-radius: 5px;
 }
@@ -194,7 +204,7 @@ nav{
     padding: 7.5rem 1rem;
 }
 .section-2-top{
-    color: rgba(0, 0, 0, 0.4);
+    color: var(--light-black);
     font-family: var(--font-system);
     letter-spacing: 0.08rem;
     font-size: 0.9rem;
@@ -208,11 +218,13 @@ nav{
     margin-top: 0.8rem;
     font-family: var(--font-primary);
     margin-bottom: 1.5rem;
+    color: var(--font-color);
 }
 .text-box-sec-2{
     width: 80%;
     font-size: 1.2rem;
     line-height: 1.5;
+    color: var(--font-color);
 }
 .box-container-2{
     display: grid;
@@ -490,4 +502,110 @@ nav{
 .section-6>.heading{
     margin-top: 0;
     margin-bottom: 1.45rem;
+    font-size: 5rem;
+    display: inline-block;
+    width: 80%;
+}
+
+footer{
+    padding: 48px 32px;
+}
+
+footer>.box-container{
+    gap: 3rem;
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.unit-1-footer{
+    width: clamp(216px, 20vw, 298px);
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.footer-title{
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+
+.footer-text{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 0.8rem;
+    font-family: var(--font-system);
+}
+
+.icons-footer{
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.icons-footer>a{
+    color: var(--light-black);
+}
+
+.footer-title-2{
+    font-size: 0.975rem;
+    color: var(--font-color);
+    font-family: var(--font-system);
+    margin: 0;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-system);
+    color: var(--light-black);
+}
+
+.footer-list>li{
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.footer-base{
+    justify-content: space-between;
+    font-size: 0.7rem;
+    border-top: 0.3px solid var(--light-black);
+    padding-top: 2rem;
+    font-family: var(--font-system);
+    color: var(--light-black);
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+
+body.dark{
+    --bg-color: #000;
+    --font-color: #bcb7ac;
+    --scrollbar-thumb: #fff3;
+    --scrollbar-thumb-hover: #ffffff59;
+    --scrollbar-track: #ffffff0d;
+    --light-black:rgba(188, 183, 172,0.7);
+    --sec-background: rgba(22, 22, 22, 0.4);
+    --sec-bg-2:rgba(35, 35, 35, 0.4);
+}
+body.dark header{
+    background-color: var(--bg-color);
+}
+body.dark .sec-2-box-1{
+    background-color: var(--sec-bg-2);
+    border: 0.1px solid var(--sec-bg-2);
+}
+body.dark .sec-2-box-2{
+    background-color: rgba(233, 93, 87 ,0.05);
+    border: 1px solid rgba(233, 93, 87 ,0.3);
+}
+body.dark .sec-4-box-1, body.dark .sec-5-box{
+    border: 1px solid rgba(44, 43, 43, 0.8);
 }
