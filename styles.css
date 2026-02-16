@@ -10,6 +10,7 @@
     --scrollbar-thumb-hover: #0006;
     --scrollbar-track: #0000000d;
     --sec-background:rgba(0, 0, 0, 0.05);
+    --light-black:rgba(0,0,0,0.5);
 }
 html{
     scroll-behavior: smooth;
@@ -173,7 +174,7 @@ nav{
 }
 .paragraph{
     font-family: var(--font-system);
-    color: rgba(0,0,0,0.5);
+    color: var(--light-black);
     margin: 0;
     font-size: 0.8rem;
 }
@@ -241,7 +242,7 @@ nav{
     gap: 5px;
     font-family: var(--font-system);
     letter-spacing: 0.1rem;
-    color: rgba(0,0,0,0.5);
+    color: var(--light-black);
     font-size: 0.8rem;
 }
 
@@ -255,7 +256,7 @@ nav{
 }
 .box-text-sec-2{
     text-align: left;
-    color: rgba(0,0,0,0.5);
+    color: var(--light-black);
     font-family: var(--font-system);
     font-size: 0.9rem;
     font-weight: 300;
@@ -285,7 +286,7 @@ nav{
 }
 
 .box-3{
-    width: 18rem;
+    width: 80%;
     padding: 2rem;
     align-items: flex-start;
 }
@@ -354,18 +355,21 @@ nav{
 
 .sec-5-box-container{
     gap: 30px;
+    margin-bottom: 3rem;
 }
 
 .sec-5-box{
-    width: 90%;
+    width: 85%;
     align-items: flex-start;
+    justify-content: flex-start;
+    padding: 32px;
 }
 
 .unit{
     justify-content: flex-start;
     flex-direction: column;
     width: 25rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
 }
 .details{
     display: flex;
@@ -375,6 +379,7 @@ nav{
 }
 .participation{
     flex-direction: column;
+    margin-top: 1rem;
 }
 .college-name{
     font-size: 0.9rem;
@@ -399,4 +404,90 @@ nav{
     height: 100%;
     background-color: var(--sec-color);
     border-radius: 2px;
+}
+
+.sec-5-small-text{
+    font-size: 0.75rem;
+    font-family: var(--font-system);
+}
+
+.line{
+    background-color: rgba(0,0,0,0.3);
+    height: 0.3px;
+    width: 95%;
+    margin-left: 0;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.sec-5-unit-2{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.sec-5-unit-2 > .details{
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.sec-5-text{
+    font-size: 2.45rem;
+}
+
+.sec-5-unit-2 > .box-text-sec-2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.section-5 > .text-box-sec-2{
+    display: inline-block;
+    width: 70%;
+}
+.sec-5-small-text-2{
+    font-size: 0.85rem;
+    font-family: var(--font-system);
+}
+
+.section-5>.orange-container{
+    width: 53.5rem;
+    height: 11.375rem;
+    padding: 3rem;
+    flex-direction: column;
+}
+
+.heading-sec-5{
+    color: var(--font-color);
+    font-size: 2.6rem;
+}
+
+.sec-5-p{
+    display: inline-block;
+    width: 68%;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-align: center;
+    color: var(--font-color);
+    margin-bottom: 1.5rem;
+}
+.section-6{
+    background-color: var(--sec-background);
+    padding: 128px 32px;
+}
+
+.text-box-sec-6{
+    font-size: 1.3rem;
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 3rem;
+}
+
+.very-small-text-sec-6{
+    font-size: 0.7rem;
+    font-family: var(--font-system);
+    color: var(--light-black);
+    margin-top: 1.45rem;
+}
+
+.section-6>.heading{
+    margin-top: 0;
+    margin-bottom: 1.45rem;
 }
