@@ -12,25 +12,69 @@
 </head>
 <body>
     <header>
-        <div class="logo flex-center"> <img src="https://www.hyrup.in/_next/image?url=%2Fhyrup%20logo.png&w=256&q=75" alt="" width="28px" height="28px" style="padding-right: 3px;">HYRUP</div>
+        <div class="logo flex-center"> <img src="https://www.hyrup.in/_next/image?url=%2Fhyrup%20logo.png&w=256&q=75" alt="" width="28px" height="28px" style="padding-right: 3px;"><span class="hide">HYRUP</span></div>
         <nav>
-            <button class="btn orange-btn">fix forward</button>
-            <button class="btn">Careers</button>
-            <button class="btn orange-btn">Join Now</button>
-            <button class="btn flex-center" id="theme-toggle"><svg class="moon" width="16px" height="16px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg> Dark</button>
+            <button class="hamburger" id="menuBtn" onclick="openMenu()">
+                <div class="h-bar"></div>
+                <div class="h-bar"></div>
+                <div class="h-bar"></div>
+            </button>
+            <button class="hamburger" id="close" onclick="closeMenu()">X</button>
+            <button class="btn orange-btn hide" onclick="alert(`Page not found`)">fix forward</button>
+            <button class="btn hide" onclick="alert(`Page not found`)">Careers</button>
+            <button class="btn orange-btn" onclick="alert(`Page not found`)">Join Now</button>
+            <button class="btn flex-center" id="theme-toggle"><svg class="moon" width="16px" height="16px" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg> <span class="hide">Dark</span></button>
         </nav>
     </header>
-    <section class="section-1 section">
+    <div class="mobile-nav section" id="menu">
+        <div class="menu-items">
+            <a href="#home" class="menu-item" onclick="closeMenu()">
+                <span>HOME</span>
+                <span class="arrow">→</span>
+            </a>
+            
+            <a href="#fix-forward" class="menu-item featured" onclick="alert(`Page not found`)">
+                <span>FIX FORWARD</span>
+                <span class="arrow">→</span>
+            </a>
+            
+            <a href="#careers" class="menu-item" onclick="alert(`Page not found`)">
+                <span>CAREERS</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+
+        <div class="menu-footer">
+            <p class="follow-text">Follow us</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/hyrupofficial?igsh=MW9hcnVwOWFwd3phdA==" class="social-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/hyrup.in/" class="social-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="section-1 section" id="home">
         <div class="container flex-center">
             <div class="orange-container">
                 🎓 FREE FOR STUDENTS
             </div>
             <h1 class="heading">
-                Get Hired For Your <span class="orange-text">Skills</span>, Not Your Degree
+                Get Hired For Your <span class="orange-text">Skills</span>,<br> Not Your Degree
             </h1>
             <p class="text-box">The student career launchpad where your abilities matter more than your college name. Connect with mentors, build real skills, and land opportunities that actually fit you.</p>
             <div class="buttons flex-center">
-                <button class="btn orange-btn getStarted-btn btn-container">GET STARTED FREE →</button>
+                <button class="btn orange-btn getStarted-btn btn-container"  onclick="alert(`Page not found`)">GET STARTED FREE →</button>
                 <a href="#features"><button class="btn black-btn btn-container">EXPLORE FEATURES</button></a>
             </div>
             <div class="box-container">
@@ -47,7 +91,7 @@
         <h2 class="heading heading-sec-2">
             We're Fixing The <span class="orange-text">Broken System</span>
         </h2>
-        <p class="text-box text-box-sec-2">Built by students, for students. We're tired of LinkedIn DMs that go nowhere, job<br>applications that disappear into black holes, and a system that values college<br>names over actual skills.</p>
+        <p class="text-box text-box-sec-2">Built by students, for students. We're tired of LinkedIn DMs that go nowhere, job applications that disappear into black holes, and a system that values college names over actual skills.</p>
         <div class="box-container-2">
             <div class="sec-2-box-1">
                 <div class="box-title"><div class="orange-box"></div> <p>THE PROBLEM</p></div>
@@ -107,25 +151,20 @@
         <h2 class="heading heading-sec-2">
             <span class="orange-text">FIX FORWARD</span> Challenge
         </h2>
-        <p class="text-box text-box-sec-2">Healthcare's broken? Fix it. Education system outdated? Rebuild it. Climate<br>crisis? Solve it. See something broken in your world? Don't just complain — fix it<br>and pass it forward.</p>
-        <div class="box-container-2">
+        <p class="text-box text-box-sec-2 text-box-sec-3">Healthcare's broken? Fix it. Education system outdated? Rebuild it. Climate crisis? Solve it. See something broken in your world? Don't just complain — fix it and pass it forward.</p>
+        <div class="box-container-2 sec-4-container-2">
             <div class="sec-4-box-1">
                 <h3 class="small-box-heading box-3-heading">The Meaning Behind FixForward</h3>
                 <p class="box-text-sec-2">
-                    There's a saying — when someone helps you, you don't just thank them. You help someone else in need. The cycle continues.<br>
-                    <br>
-                    FixForward is built on the same idea. You see something broken in society? Fix it. Not just for yourself, but for the next generation. Forward the fix.<br>
-                    <br>
-                    We're looking for problem-solvers who see issues in their daily lives and have the courage to create solutions that ripple forward.<br>
-                    <br>
-                    <span class="orange-text">→</span> Build tech that actually matters<br>
-                    <br>
-                    <span class="orange-text">→</span> Vibe with industry mentors who've been there<br>
-                    <br>
-                    <span class="orange-text">→</span> Win cash + flex your project everywhere<br>
-                    <br>
-                    <span class="orange-text">→</span> Network with builders, not just coders<br>
-                    <br>
+                    <ul class="footer-list">
+                        <li class="inner-list-item">There's a saying — when someone helps you, you don't just thank them. You help someone else in need. The cycle continues.</li>
+                        <li class="inner-list-item">FixForward is built on the same idea. You see something broken in society? Fix it. Not just for yourself, but for the next generation. Forward the fix.</li>
+                        <li class="inner-list-item">We're looking for problem-solvers who see issues in their daily lives and have the courage to create solutions that ripple forward.</li>
+                        <li class="inner-list-item"><span class="orange-text">→</span> Build tech that actually matters</li>
+                        <li class="inner-list-item"><span class="orange-text">→</span> Vibe with industry mentors who've been there</li>
+                        <li class="inner-list-item"><span class="orange-text">→</span> Win cash + flex your project everywhere</li>
+                        <li class="inner-list-item"><span class="orange-text">→</span> Network with builders, not just coders</li>
+                    </ul>   
                 </p>
             </div>
             <div class="sec-4-box-1">
@@ -133,13 +172,12 @@
                 <p class="box-text-sec-2">Stop building todo apps. Start solving actual problems. Your skills deserve a better stage. This is where your code stops being homework and starts being a portfolio piece recruiters actually want to see.</p>
                 <br><br>
                 <div class="sec-4-unit-1 flex-center">
-                    <div class="orange-container sec-4-icon-box flex-center"> <svg class="w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> </div>
+                    <div class="orange-container sec-4-icon-box flex-center"> <svg class="calender w-8 h-8 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg> </div>
                     <div class="sec-4-unit-2">
                         <p class="bold-text">Registration Closes</p>
                         <p class="box-text-sec-2" style="font-size: 0.8rem;">Last Date: 25th February</p>
                     </div>
                 </div>
-                <br>
                 <div class="sec-4-unit-1 flex-center">
                     <div class="orange-container sec-4-icon-box flex-center"><span class="orange-text rupee">₹3L</span></div>
                     <div class="sec-4-unit-2">
@@ -147,8 +185,7 @@
                         <p class="box-text-sec-2" style="font-size: 0.8rem;">Last Date: 25th February</p>
                     </div>
                 </div>
-                <br>
-                <button class="btn orange-btn getStarted-btn btn-container">REGISTER FOR FIXFORWARD →</button>
+                <button class="btn orange-btn getStarted-btn btn-container reg-forward">REGISTER FOR FIXFORWARD →</button>
             </div>
             
         </div>
@@ -158,7 +195,7 @@
         <h2 class="heading heading-sec-2">
             Join<span class="orange-text"> 3,154+ </span>Students Already On HYRUP
         </h2>
-        <p class="text-box text-box-sec-2">Students from colleges across India are already building their future with HYRUP.</p>
+        <p class="text-box text-box-sec-2 text-box-sec-5">Students from colleges across India are already building their future with HYRUP.</p>
         <div class="box-container-2 sec-5-box-container">
             <div class="box sec-5-box">
                 <h3 class="small-box-heading">Top Active Colleges</h3>
@@ -178,7 +215,7 @@
                             <div class="orange-text-small orange-text sec-5-small-text">676 students</div>
                         </div>
                         <div class="bar">
-                            <div class="orange-bar" style="width: 75%;"></div>
+                            <div class="orange-bar" style="width: 81%;"></div>
                         </div>
                     </div>
                     <div class="unit flex-center">
@@ -187,7 +224,7 @@
                             <div class="orange-text-small orange-text sec-5-small-text">559 students</div>
                         </div>
                         <div class="bar">
-                            <div class="orange-bar" style="width: 60%;"></div>
+                            <div class="orange-bar" style="width: 67%;"></div>
                         </div>
                     </div>
                     <div class="unit flex-center">
@@ -196,7 +233,7 @@
                             <div class="orange-text-small orange-text sec-5-small-text">358 students</div>
                         </div>
                         <div class="bar">
-                            <div class="orange-bar" style="width: 50%;"></div>
+                            <div class="orange-bar" style="width: 43%;"></div>
                         </div>
                     </div>
                 </div>
@@ -232,23 +269,23 @@
                 </div>
             </div>
         </div>
-        <div class="orange-container flex-center">
+        <div class="orange-container flex-center sec-5-orange-container">
             <h3 class="heading heading-sec-2 heading-sec-5">100%. Free. Forever.</h3>
             <p class="sec-5-p box-text-sec-2">Join 3,154+ students who are already using HYRUP to build their careers. No hidden fees, no premium plans, no credit card required.</p>
-            <button class="btn orange-btn getStarted-btn btn-container">START FOR FREE →</button>
+            <button class="btn orange-btn getStarted-btn btn-container start-for-free"  onclick="alert(`Page not found`)">START FOR FREE →</button>
         </div>
     </section>
     
     <section class="section section-6">
-        <h1 class="heading">
+        <h1 class="heading heading-sec-6">
             Ready To Launch Your <span class="orange-text">Career?</span>
         </h1>
          <p class="text-box text-box-sec-2 text-box-sec-6">Join 3,154+ students who are getting hired for their skills, not their degrees.</p>
-         <button class="btn orange-btn getStarted-btn btn-container">JOIN HYRUP NOW →</button>
+         <button class="btn orange-btn getStarted-btn btn-container"  onclick="alert(`Page not found`)">JOIN HYRUP NOW →</button>
          <p class="very-small-text-sec-6">No credit card required • 100% free forever • 2 min setup</p>
     </section>
     <footer>
-        <div class="box-container">
+        <div class="box-container footer-box">
             <div class="unit-1-footer flex-center">
                 <div class="footer-title"> <img src="https://www.hyrup.in/_next/image?url=%2Fhyrup%20logo.png&w=256&q=75" alt="" width="28px" height="28px" style="padding-right: 3px;">HYRUP</div>
                 <div class="very-small-text-sec-6 footer-text">
@@ -262,28 +299,28 @@
             <div class="unit-1-footer flex-center">
                 <h4 class="footer-title-2">PRODUCT</h4>
                 <ul class="footer-list">
-                    <li>For Students</li>
-                    <li>Features</li>
-                    <li>Find Jobs</li>
-                    <li>Find mentors</li>
+                    <li class="footer-list-item">For Students</li>
+                    <li class="footer-list-item">Features</li>
+                    <li class="footer-list-item">Find Jobs</li>
+                    <li class="footer-list-item">Find mentors</li>
                 </ul>
             </div>
             <div class="unit-1-footer flex-center">
                 <h4 class="footer-title-2">COMPANY</h4>
                 <ul class="footer-list">
-                    <li>About Us</li>
-                    <li>Fix Forward</li>
-                    <li>Blog</li>
-                    <li>Careers</li>
+                    <li class="footer-list-item">About Us</li>
+                    <li class="footer-list-item">Fix Forward</li>
+                    <li class="footer-list-item">Blog</li>
+                    <li class="footer-list-item">Careers</li>
                 </ul>
             </div>
             <div class="unit-1-footer flex-center">
                 <h4 class="footer-title-2">SUPPORT</h4>
                 <ul class="footer-list">
-                    <li>Contact Us</li>
-                    <li>Help Center</li>
-                    <li>Privacy Policy</li>
-                    <li>Terms of Service</li>
+                    <li class="footer-list-item">Contact Us</li>
+                    <li class="footer-list-item">Help Center</li>
+                    <li class="footer-list-item">Privacy Policy</li>
+                    <li class="footer-list-item">Terms of Service</li>
                 </ul>
             </div>
         </div>
